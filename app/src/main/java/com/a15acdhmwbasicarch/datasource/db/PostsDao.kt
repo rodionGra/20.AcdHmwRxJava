@@ -21,6 +21,6 @@ interface PostsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertPost(userPostData: UserPostData) : Completable
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertListPosts(userPostData: List<UserPostData>) : Completable
 }
